@@ -1,116 +1,79 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+import requests
+import json
 from typing import List
-import google.generativeai as genai
-from playwright.sync_api import sync_playwright
-from urllib.parse import urljoin
 
-# -------- GEMINI SETUP ---------
-genai.configure(api_key="AIzaSyDgORyXsBcfO5Y8QYZZ2rYmaKQ0JA6n6Bw")  # Set your real key here
-gemini_model = genai.GenerativeModel("gemini-2.0-flash")
+OLLAMA_API_URL = "http://127.0.0.1:11434/api/generate"
+MODEL_NAME = "llama2"  # Use your preferred model; make sure it is pulled via ollama CLI
 
-with open("CourseStructure.txt", "r", encoding="utf-8") as f:
-    COURSE_STRUCTURE = f.read()
+def load_file(filepath: str) -> str:
+    """Load and return the text contents of a file with utf-8 encoding."""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return f.read()
 
-# -------- FASTAPI SETUP ---------
-class CourseRequest(BaseModel):
-    learn_url: str
+def chunk_text(text: str, max_chars: int = 3000) -> List[str]:
+    """Simple chunking for long text based on characters (conservative)."""
+    return [text[i:i+max_chars] for i in range(0, len(text), max_chars)]
 
-app = FastAPI()
+def prompt_from_template(template: str, chunk: str) -> str:
+    """Assemble the prompt string to guide the model for JSON output."""
+    return (
+        "You are an expert summarizer. "
+        "Given the template below, create a summary of the provided content as **valid JSON**. "
+        "Each header in the template must be used as a JSON key, and lists must be arrays. "
+        "Output ONLY valid JSON with all keys present.\n\n"
+        "TEMPLATE:\n"
+        f"{template}\n\n"
+        "CONTENT TO SUMMARIZE:\n"
+        f"{chunk}"
+    )
 
-# -------- SCRAPER FUNCTIONS ---------
-def get_learning_paths(course_url):
-    learning_paths = []
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto(course_url, wait_until='domcontentloaded', timeout=60000)
-        page.wait_for_timeout(3000)
-        anchors = page.query_selector_all("a.card-title")
-        for a in anchors:
-            href = a.get_attribute("href") or ""
-            text = (a.inner_text() or "").strip()
-            if "/training/paths/" in href:
-                full_url = urljoin(course_url, href)
-                learning_paths.append({"url": full_url, "title": text})
-        browser.close()
-    return learning_paths
+def ollama_summarize_with_template(content: str, template: str) -> dict:
+    """Summarize the chunked content via Ollama, enforcing JSON output matching template."""
+    chunks = chunk_text(content)
+    chunk_summaries = []
 
-def get_inner_modules(path_url):
-    module_links = []
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto(path_url, wait_until='domcontentloaded', timeout=60000)
-        page.wait_for_timeout(2000)
-        anchors = page.query_selector_all("a.unit-title, a.module-title")
-        if not anchors:
-            anchors = [
-                a for a in page.query_selector_all("a[data-linktype='relative-path']")
-                if "/training/modules/" in (a.get_attribute("href") or "")
-            ]
-        for a in anchors:
-            href = a.get_attribute("href") or ""
-            text = (a.inner_text() or "").strip()
-            if "/training/modules/" in href:
-                full_url = urljoin(path_url, href)
-                module_links.append({"url": full_url, "title": text})
-        browser.close()
-    return module_links
+    for idx, chunk in enumerate(chunks):
+        prompt = prompt_from_template(template, chunk)
+        payload = {
+            "model": MODEL_NAME,
+            "prompt": prompt
+        }
 
-def scrape_module_content(url):
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+        response = requests.post(OLLAMA_API_URL, json=payload)
+        json_lines = []
+        for line in response.iter_lines():
+            if line:
+                response_obj = json.loads(line)
+                if 'response' in response_obj:
+                    json_lines.append(response_obj['response'])
+        summary_str = ''.join(json_lines).strip()
+        # Attempt to parse summarization as JSON
         try:
-            page.goto(url, wait_until='domcontentloaded', timeout=60000)
-            page.wait_for_selector("h1", timeout=8000)
-            title_elem = page.query_selector("h1")
-            title = title_elem.inner_text().strip() if title_elem else "No Title Found"
-            content_elem = page.query_selector("main") or page.query_selector("body")
-            content = content_elem.inner_text().strip() if content_elem else ""
-        except Exception as e:
-            title = f"Error loading page: {url}"
-            content = str(e)
-        browser.close()
-    return title, content
+            summary_json = json.loads(summary_str)
+        except json.JSONDecodeError:
+            summary_json = {
+                "error": "Invalid JSON returned by model",
+                "raw_output": summary_str
+            }
+        chunk_summaries.append(summary_json)
 
-def summarize_with_gemini(content: str, template: str) -> str:
-    prompt = f"""You are a helpful assistant. I will give you raw content from a Microsoft Learn training module.
-Summarize it using the same format as the example below.
+    if len(chunk_summaries) == 1:
+        return chunk_summaries[0]
+    else:
+        return {
+            "chunk_summaries": chunk_summaries,
+            "note": "Content was chunked to fit model context window."
+        }
 
----
-Example Summary:
-{template}
+# ---- USAGE EXAMPLE ----
 
----
-Module Content:
-{content}
-"""
-    try:
-        response = gemini_model.generate_content(prompt)
-        return response.text
-    except Exception as e:
-        return f"[Gemini Error] {e}"
+if __name__ == "__main__":
+    # Load the template from file
+    template = load_file("CourseStructure.txt")
+    # Load your module content from another file
+    module_content = load_file("module1.txt")  # Replace as needed
 
-# --------- API ENDPOINT ---------
-@app.post("/summarize-learn-course")
-def summarize_learn_course(req: CourseRequest):
-    learning_paths = get_learning_paths(req.learn_url)
-    if not learning_paths:
-        return {"error": "No learning paths found for this course link."}
-
-    summaries = []
-    for path in learning_paths:
-        modules = get_inner_modules(path["url"])
-        for mod in modules:
-            title, content = scrape_module_content(mod['url'])
-            summary = summarize_with_gemini(content, COURSE_STRUCTURE)
-            summaries.append({
-                "module_title": title,
-                "module_url": mod['url'],
-                "summary": summary
-            })
-    return {"course_url": req.learn_url, "summaries": summaries}
-
-# ------ Run with: uvicorn filename:app --host 0.0.0.0 --port 8000 --------
+    # Run summarization
+    summary = ollama_summarize_with_template(module_content, template)
+    # Print or store the summary as a JSON object
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
