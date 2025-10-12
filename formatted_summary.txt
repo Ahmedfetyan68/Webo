@@ -1,0 +1,71 @@
+➢ Table of Contents: N/A ➢ Course Content: N/A ➢ Unit Summary
+
+➢ Course Content:
+1. Course Overview:
+  o Purpose: To introduce the concept of Microsoft Power Platform and Dynamics 365 customer engagement apps.
+  o Objectives: To understand the role of Power Platform in building Dynamics 365 customer engagement applications.
+
+➢ Unit Summary
+1. Unit Overview:
+  • Purpose: To describe Microsoft Power Platform and its relationship to Dynamics 365 customer engagement apps.
+  • Key Concepts: Microsoft Power Platform, Dynamics 365 customer engagement apps, model-driven applications, Power Apps, Power BI, Power Automate, Power Pages.
+  • Learning Objectives: To understand the importance of Power Platform in building Dynamics 365 customer engagement applications and its low-code application development platform features.
+
+2. Core Topics Covered:
+  • Topic 1: Microsoft Power Platform
+    o Brief description: A low-code application development platform that combines Power Apps, Power BI, Power Automate, and Power Pages into one business application platform.
+    o Key takeaways: Provides a rapid low-code development environment for building custom apps for business needs.
+  • Topic 2: Dynamics 365 customer engagement apps
+    o Brief description: Built on Microsoft Power Platform, model-driven applications that provide quick and easy app building and data insights.
+    o Key takeaways: All Dynamics 365 customer engagement apps are model-driven applications built using Power Apps.
+
+3. Practical Applications:
+  • How do the concepts in this unit apply in real-world scenarios? Power Platform can be used to build custom business applications, such as forms, views, charts, and dashboards for presenting data to end users.
+  • Any tools, software, or techniques introduced that the learner should practice? None mentioned.
+
+4. Key Terms and Definitions:
+  • List important terms with short definitions.
+    o Power Apps: A suite of apps development services with a scalable data platform (Microsoft Dataverse).
+    o Microsoft Dataverse: A data model store within Power Platform.
+    o Model-driven applications: Built using Power Apps, based on a data model store within Microsoft Dataverse.
+
+➢ Quiz:
+• A quiz that covers all the topics in this module to assess learner comprehension and reinforce learning.
+
+➢ Table of Contents:
+
+➢ Course Content:
+
+1. Course Overview:
+  o Purpose: To introduce learners to Microsoft Dynamics 365 and its tools for creating custom applications, integrating data sources, and streamlining business processes.
+  o Objectives: Learners will understand the capabilities of Power Apps, Power BI, Power Automate, Power Pages, and Copilot Studio, and how they can be used to enhance Dynamics 365 applications.
+
+➢ Unit Summary
+1. Unit Overview:
+  • Purpose: To introduce learners to Microsoft Dynamics 365 and its tools for creating custom applications, integrating data sources, and streamlining business processes.
+  • Key Concepts: Power Apps, Power BI, Power Automate, Power Pages, Copilot Studio, Dynamics 365 Customer Engagement apps, Dataverse.
+  • Learning Objectives: Learners will understand the capabilities of each tool and how they can be used to enhance Dynamics 365 applications.
+
+2. Core Topics Covered:
+  • Power Apps: Enables creation of web and mobile applications that run on all devices, with ability to interact with cloud & on-premises data sources.
+    o Brief description: Power Apps allows users to create custom applications using a low-code approach.
+    o Key takeaways: Understanding how to use Power Apps to streamline business processes and integrate data sources.
+  • Power BI: Provides business analytics capabilities for connecting to Dynamics 365 apps and providing important insights into an organization.
+    o Brief description: Power BI enables users to connect to various data sources, create visualizations, and share insights.
+    o Key takeaways: Understanding how to use Power BI to gain valuable insights from data.
+  • Power Automate: Helps guide people through business processes using items called business process flows in Dynamics 365 customer engagement apps.
+    o Brief description: Power Automate automates repetitive tasks by connecting various applications and services.
+    o Key takeaways: Understanding how to use Power Automate to streamline business processes.
+  • Power Pages: Enables organizations to create externally facing sites that connect to Dataverse, allowing customers to access portals and find answers to questions.
+    o Brief description: Power Pages provides a low-code approach for creating custom web applications.
+    o Key takeaways: Understanding how to use Power Pages to provide self-service options for customers.
+  • Copilot Studio: Allows users to create custom agents that can be used to extend the capabilities of Dynamics 365 Customer Engagement apps.
+    o Brief description: Copilot Studio enables users to build custom chatbots and virtual assistants.
+    o Key takeaways: Understanding how to use Copilot Studio to reduce workloads and enhance customer support.
+
+3. Practical Applications:
+  • How do the concepts in this unit apply in real-world scenarios? These tools can be used to streamline business processes, integrate data sources, provide self-service options for customers, and automate repetitive tasks.
+  • Any tools, software, or techniques introduced that the learner should practice? None mentioned.
+
+4. Key Terms and Definitions:
+  • List important terms with short definitions: Dynamics 365, Power Apps, Power BI, Power Automate, Power Pages, Copilot Studio, Dataverse.

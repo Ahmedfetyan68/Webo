@@ -17,14 +17,15 @@ def chunk_text(text: str, max_chars: int = 2000) -> List[str]:
 
 def build_prompt(template: str, chunk: str) -> str:
     return (
-        "You are an expert summarizer. Use the following template as a guide for what topics and sections to cover in your summary. "
-        "Create a comprehensive summary that addresses all the sections mentioned in the template. "
-        "Respond ONLY with valid JSON in this exact format: {\"summary\": \"your summary text here\"}. "
-        "No extra text, comments, or markdown. All property names must be in double quotes. "
-        "The summary should be a clear, flowing narrative that covers all template sections.\n\n"
-        f"TEMPLATE (use as guide for what to cover):\n{template}\n\n"
+        "You are an expert summarizer. Use the template structure below as your OUTPUT FORMAT. "
+        "Fill in each section with actual content from the provided text. "
+        "Keep the EXACT same headers, bullet points, numbering, and indentation as the template. "
+        "Replace placeholder text with real summarized information from the content. "
+        "Respond with ONLY valid JSON in this format: {\"summary\": \"your formatted text here\"}. "
+        "The summary field must contain the filled template with all headers and formatting preserved.\n\n"
+        f"TEMPLATE STRUCTURE (preserve this exact format):\n{template}\n\n"
         f"CONTENT TO SUMMARIZE:\n{chunk}\n\n"
-        "Return ONLY: {\"summary\": \"...\"}"
+        "Return ONLY: {\"summary\": \"...\"} where summary contains the filled template with preserved formatting."
     )
 
 def fix_trailing_commas(json_str):
@@ -43,7 +44,7 @@ def parse_json_robust(json_candidate):
         except Exception:
             return {"error": "Could not parse JSON", "raw_output": json_candidate}
 
-def ollama_summarize_simple(content: str, template: str) -> dict:
+def ollama_summarize_formatted(content: str, template: str) -> dict:
     chunks = chunk_text(content)
     all_summaries = []
 
@@ -73,8 +74,8 @@ def ollama_summarize_simple(content: str, template: str) -> dict:
             # Fallback: try to get any text value
             all_summaries.append(str(summary_json))
 
-    # Concatenate all chunk summaries into one
-    final_summary = " ".join(all_summaries)
+    # Concatenate all chunk summaries with double newline separation
+    final_summary = "\n\n".join(all_summaries)
     
     return {
         "summary": final_summary
@@ -82,9 +83,14 @@ def ollama_summarize_simple(content: str, template: str) -> dict:
 
 # -- USAGE --
 if __name__ == "__main__":
-    template = load_file("CourseStructure.txt")  # Your template (guides what to cover)
+    template = load_file("CourseStructure.txt")  # Your template with structure
     module_content = load_file("module1.txt")     # Content to summarize
     
-    result = ollama_summarize_simple(module_content, template)
+    result = ollama_summarize_formatted(module_content, template)
     
     print(json.dumps(result, indent=2, ensure_ascii=False))
+    
+    # Optionally, save the formatted summary to a text file
+    with open("formatted_summary.txt", "w", encoding="utf-8") as f:
+        f.write(result["summary"])
+    print("\nFormatted summary also saved to formatted_summary.txt")
