@@ -1,0 +1,967 @@
+=== Learning Path 1: Explore the core capabilities of Microsoft Dynamics 365 customer engagement apps ===
+URL: https://learn.microsoft.com/en-us/training/paths/examine-core-capabilities-of-microsoft-dynamics-365-customer-engagement-apps/
+
+Found 19 modules in this path.
+
+--- Module 1: Introduction ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Introduction
+
+Content:
+Introduction
+2 minutes
+
+Dynamics 365’s customer engagement applications are client-driven business applications built on the Power Platform. They're designed to help organizations more effectively engage their customers. The sales and customer insights applications help identify sales prospects and turn them into long-lasting relationships. Our service focused applications help your organization service your customers, whether you have a call center, service center, or are providing service in the field. Dynamics 365 customer engagement apps ensure that you have the tools necessary to fully engage your customers across all aspects of your business.
+
+In this module, we introduce the Dynamics 365 customer engagement apps and explain the features that are common to all the individual Dynamics 365 customer engagement apps.
+
+Objectives
+
+After completing this module, you'll be able to:
+
+Describe use cases for Dynamics 365.
+Describe how the Microsoft Power Platform relates to Dynamics 365 apps.
+Explain Microsoft Dataverse and its use.
+Examine the different Dynamics 365 customer engagement apps.
+Review options for accessing applications.
+Describe capabilities of Copilot in the Dynamics 365 customer engagement apps.
+
+Now let's dive in.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 2: Describe customer relationship management ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/2-describe-customer-relationship-management/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe customer relationship management
+
+Content:
+Describe customer relationship management
+3 minutes
+
+A customer is an individual or company that receives, consumes, or buys a product or service. The primary goal of a commercial enterprise is to attract customers. But that isn't just a one-time event. It involves maintaining a strong relationship with customers over time, ensuring they want to continue doing business with your organization.
+
+Organizations manage customer relationships through customer engagement. Customer engagement represents the emotional connection between a customer and a brand. How an organization engages their customers directly impacts their relationship with them. Highly engaged customers buy more and demonstrate greater loyalty.
+
+Many organizations use Customer Relationship Management (CRM) software to assist them as they engage with their customers. These applications help organizations fundamentally reimagine how they engage customers. They help organizations create personalized marketing, sales, and service experiences using data and intelligence to improve every interaction.
+
+Dynamics 365 customer engagement apps, which are built on the Power Platform, are Microsoft’s CRM applications that help organizations manage customer relationships. Organizations can utilize these applications individually or together to create powerful end-to-end relationships with their customers. For example, an organization that's selling products and services to their customers can use Dynamics 365 Sales to assist sellers in managing their sales pipeline, engaging with customers, and building relationships.
+
+While each application provides a specific solution, they share common elements that are the same regardless of the application you're using. This module introduces you to the different Dynamics 365 customer engagement apps and examines elements that are common across all of them.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 3: Describe Microsoft Power Platform and Dynamics 365 customer engagement apps ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/3-describe-power-platform-and-dynamics-365-customer-engagement-apps/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft Power Platform and Dynamics 365 customer engagement apps
+
+Content:
+Describe Microsoft Power Platform and Dynamics 365 customer engagement apps
+3 minutes
+
+Before we examine the different Dynamics 365 customer engagement applications, let’s examine what they're built on. As mentioned initially, Dynamics 365’s customer engagement applications are built on Microsoft Power Platform. Power Platform is Microsoft’s low-code application development platform that not only spans Dynamics 365, but also Office 365, Azure, and standalone applications. It combines the power of Power Apps, Power BI, Power Automate, and Power Pages into one business application platform that provides quick and easy app building and data insights.
+
+The Power Platform is important to Dynamics 365 customer engagement apps for many different reasons. First, all Dynamics 365 customer engagement apps are what are referred to as model-driven applications. Model-driven applications are built using Power Apps. They're based on a data model store within Microsoft Dataverse, which we cover in the next unit. Components such as forms, views, charts, and dashboards are used to present data to end users.
+
+Model-driven applications aren't the only component of the Power Platform used by Dynamics 365 applications. Overall, the Power Platform components used by Dynamics 365 customer engagement apps can include:
+
+Power Apps: Power Apps provides a rapid low code development environment for building custom apps for business needs. It's a suite of apps development services with a scalable data platform (Microsoft Dataverse) and an ability to interact with cloud & on-premises data sources. Power Apps enables the creation of web and mobile applications that run on all devices.
+
+Power BI: The business analytics capabilities provided by Power BI are often used to connect to Dynamics 365 applications and provide important insight into an organization. These visualizations can then be used inside Dynamics 365 apps such as Dynamics 365 Sales, or Customer Service.
+
+Power Automate: Items called business process flows are the primary component in Dynamics 365 customer engagement apps. They help provide a guide for people to get work done. For example, Dynamics 365 Sales includes business process flow that helps guide sellers beginning with a Lead and ending with a closed sale.
+
+Power Pages: Many organizations provide customers with self-support options where customers can access a portal and find answers to questions, engage with support, or even open new support tickets. Power Pages makes it easy for organizations to create externally facing sites that connect to Dataverse that customers can access.
+
+Copilot Studio: As agents continue to work into our daily lives, Microsoft Copilot Studio allows you to create custom agents that can be used to extend the capabilities of Dynamics 365 Customer Engagement apps. For example, you could create an agent to assist customers with support questions and reduce workloads of your representatives.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 4: Describe Microsoft Dataverse and Dynamics 365 customer engagement apps ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/4-describe-dataverse-foundation-dynamics-365-customer-engagement-apps/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft Dataverse and Dynamics 365 customer engagement apps
+
+Content:
+Describe Microsoft Dataverse and Dynamics 365 customer engagement apps
+3 minutes
+
+One of the key elements to building business solutions on this platform is Microsoft Dataverse. Dataverse allows you to securely store and manage data used by your business applications. For example, you might store all your customer data in Dataverse. Dataverse data is stored in tables. A table is a set of rows and columns. Each column in a table stores a specific type of data such as names, locations, ages, dates, salaries, and so on.
+
+Dataverse includes a base set of standard tables that cover typical business scenarios such as accounts, contacts, and activities. The advantage to Dataverse is that organizations can also create custom tables specific to their needs and populate them with data.
+
+For example:
+
+A real estate company might create tables to store the properties they sell, represent open houses, or store showings.
+
+A financial company might add tables to represent loan applications or bank accounts.
+
+An auto repair company might add tables to represent the parts they sell or the services they provide.
+
+Application makers can use tools like Power Apps to build rich applications that use this data.
+
+Dataverse provides these benefits:
+
+Easy to manage: Both the metadata and data are stored in the cloud.
+
+Easy to secure: Data is securely stored so users can only access what they need to. Role-based security allows you to control access to tables for different users within your organization.
+
+Rich metadata: Data types and relationships are used directly within Power Apps.
+
+Logic and validation: Define calculated columns, business rules, workflows, and business process flows to ensure data quality and drive business processes.
+
+Productivity tools: Tables are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
+
+Dynamics 365 customer engagement apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Customer Insights use Dataverse to store and secure their data. This enables you to build apps by using Power Apps and Dataverse directly with your core business data, which is already used within Dynamics 365, without the need for integration.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 5: Describe use cases for Dynamics 365 customer engagement apps ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/5-describe-use-cases-dynamics-365-customer-engagement-apps/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe use cases for Dynamics 365 customer engagement apps
+
+Content:
+Describe use cases for Dynamics 365 customer engagement apps
+7 minutes
+
+Dynamics 365 customer engagement apps help organizations fundamentally reimagine how they engage with customers. Organizations can create personalized marketing, sales, and service experiences using data and intelligence to improve every interaction.
+
+There are five core Dynamics 365 customer engagement apps.
+
+Microsoft Dynamics 365 Customer Insights:
+
+Dynamics Customer Insights comprises two individual applications: Dynamics 365 Customer Insights - Journeys and Dynamics Customer Insights - Data.
+
+Dynamics 365 Customer Insights - Journeys is a marketing automation application that helps turn prospects into business relationships. Whether it's creating rich and dynamic marketing content or helping you understand your leads better, Dynamics 365 Customer Insights - Journeys provides you with everything that it needs to take control of your marketing efforts. Dynamics 365 Customer Insights - Journeys is powered by Microsoft Power Platform and provides customers with the ability to analyze, target, and engage with their customers.
+
+Dynamics 365 Customer Insights - Data can help you build a deeper understanding of your customers. Customer Insights – Data connects data from various transactional, behavioral, and observational sources into a single unified customer profile to provide a 360-degree customer view. Use these insights to drive customer-centric experiences and processes.
+
+Microsoft Dynamics 365 Sales:
+
+Dynamics 365 Sales empowers sellers to build strong customer relationships and close deals faster. Digital selling tools help sellers better understand which customers and sales opportunities they should be focusing on. It provides every seller in your organization with the capability to analyze, act, and automate digital selling across your organization to transform their approach to selling from the ground up. The Sales application is available in several options to provide each organization with the functionalities needed for their business:
+
+Dynamics 365 Sales Professional: A lighter weight sales management application designed for small to mid-size businesses that need solid customer relationship and sales management capabilities.
+
+Dynamics 365 Sales Enterprise: Enterprise grade sales and customer management solutions, providing robust, guided sales processes and automation in a digital age.
+
+Dynamics 365 Sales Premium: The most complete sales management and engagement offering, with Microsoft’s powerful AI capabilities woven throughout, to drive significant business outcomes and performance in a sales organization.
+
+Microsoft Dynamics 365 Customer Service:
+
+Dynamics 365 Customer Service empowers your support staff to provide enhanced assistance to your customers. It provides you with everything needed to manage the complete end-to-end lifecycle of support requests reported by customers. From the initial case creation and management, to developing knowledge management solutions, Dynamics 365 Customer Service helps organizations ensure that customer issues are being handled quickly and effectively.
+
+Microsoft Dynamics 365 Contact Center:
+
+Dynamics 365 Contact Center is a Copilot-first cloud platform that integrates generative AI across the entire customer support journey. It supports both digital and voice channels and is designed to work with any CRM system, including not only Dynamics 365, but Salesforce, or even custom-built solutions. Some key capabilities included in Contact Center include:
+
+AI-powered self-service: Chatbots and virtual assistants that understand context and intent.
+
+Intelligent routing: Automatically directs inquiries to the most suitable agent.
+
+Agent productivity tools: These tools include suggested responses, conversation summaries, and a unified knowledge interface.
+
+Supervisor tools: These tools include real-time dashboards, performance metrics, and session monitoring.
+
+Composability: Built on Microsoft Dataverse, Contact Center integrates with existing data and applications
+
+Microsoft Dynamics 365 Field Service:
+
+Dynamics 365 Field Service provides organizations with the tools necessary to deliver onsite services to their customers and manage their mobile workforce. Dynamics 365 Field Service helps equip technicians with what they need to increase first-time fix rates. Dynamics 365 Field Service provides tools that help you:
+
+create work orders
+
+schedule and dispatch technicians
+
+execute on work orders
+
+manage and service assets
+
+manage inventory and billing
+
+Microsoft Dynamics 365 Project Operations:
+
+Microsoft Dynamics 365 Project Operations helps project-based organizations connect sales, staffing and resourcing, project management, and finance teams in a single application. That capability helps to accelerate project delivery and maximize profitability. It provides organizations with the tools they need to control projects using either traditional waterfall or agile methodologies. Dynamics 365 Project Operations manages resources by providing accurate information for analysis of resource allocations and utilizations. Project Operations helps organizations do the following more effectively:
+
+Project-based selling: Organizations who sell projects can manage every aspect of the project selling process. While the sales cycle length and project costing make project-based selling different from typical product-based selling, Dynamics 365 Project Operations uses the same core sales record types used by Dynamics 365 sales to support product-based selling scenarios. This provides a common experience for organizations that might do both project-based and product-based selling.
+
+Project management: Project managers are equipped with the tools they need to be successful managing projects tasks. These tasks include task management, project and resource scheduling, creating interactive Gantt charts and work-breakdown structures. These tools help develop accurate estimates for labor, expenses, and materials, and track planned-vs-actual consumption as projects progress. Extensive reporting tools and built-in insights ensure you understand how projects are trending and help to drive timely decisions for course correction.
+
+Project resource management: Resource managers are equipped with the tools they need to successfully manage project resources. They can easily book resources with their project schedule assignments. Skill and proficiency repositories make it easy to identify which resources are qualified to work on different project tasks. Extensive resource management tools help you identify how resources are being assigned. This capability ensures that they're being used on the right types of projects and that they aren't being over extended.
+
+When used alone, each application empowers organizations to manage the daily aspects related to that item. For example, Dynamics 365 Sales helps you take control of, manage, and automate the tasks related to your sales cycle. However, when combined with Dynamics 365 Customer Service, you now have a complete solution that ensures you're providing high levels of service to your customers after they're sold. Service-related events can be used to trigger sales-related events to get sellers out selling to customers. Even though each application provides a specific type of functionality, they each share common elements to provide a unified experience whether you're using them separately or together.
+
+As a next step, let’s take a closer look at how the different applications can be accessed.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 6: Describe the capabilities of Copilot in the Dynamics 365 customer engagement apps ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/6-describe-copilot-dynamics-365-customer-engagement-apps/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe the capabilities of Copilot in the Dynamics 365 customer engagement apps
+
+Content:
+Describe the capabilities of Copilot in the Dynamics 365 customer engagement apps
+3 minutes
+
+Artificial intelligence (AI) is changing how companies do business. Not only can it provide organizations with important insights, but it also helps streamline how individuals do their work. Microsoft’s Copilot uses AI to allow individuals to communicate their needs using natural language and provides them with relevant assistance based on the details they provide.
+
+Copilot can be used throughout Dynamics 365 customer engagement applications. Copilot can help users easily retrieve information about their customers and streamline things such as data entry and task completion.
+
+Microsoft 365 Copilot for Sales
+
+Copilot for Sales is an AI assistant designed for sellers to maximize productivity and close more deals. It brings next-generation AI and sales insights from their CRM platform into the Microsoft 365 productivity tools that they use daily like Microsoft Outlook, Microsoft Teams, and Microsoft Word.
+
+Sellers can work more efficiently and improve customer experiences with email assistance, personalized sales content creation, AI-generated insights, and recommendations for next steps. Sales managers can empower their teams with AI-powered manager insights and collaboration tools. Copilot for Sales can also be customized according to your business needs. Copilot for Sales integrates seamlessly with Microsoft Dynamics 365 Sales and Salesforce Sales Cloud and can be configured to connect to other sales solutions.
+
+Copilot in Dynamics 365 Sales
+
+Copilot is an AI assistant in Dynamics 365 Sales that helps sales teams be more productive and efficient in their daily work. It has a chat interface that helps sellers quickly summarize their opportunity and lead records, stay updated on recent changes, prepare for meetings, and read the latest news about their accounts. Sellers can chat with Copilot in natural language or use predefined prompts to get the information they need.
+
+Record summarization
+
+The Copilot in Dynamics 365 Sales record summarization feature provides a quick summary of your opportunity and lead records. Summaries are generated from the fields in the default opportunity or lead view. As users start typing the opportunity or lead name after the @ symbol, Copilot suggests records that match your search. Select the record for which you want a summary.
+
+The following screenshot is an example of an opportunity summary generated by Copilot in Sales:
+
+Email assistance
+
+Copilot is also used to help compose professional-looking emails, responding to emails, and get email follow-up reminders. Copilot uses natural language processing (NLP) algorithms to help create emails messages. You simply describe the email you want to create to Copilot, and it generates a draft email. The draft can be edited as needed before sending it to a customer.
+
+Sales Research Agent
+
+The Sales Research Agent is an AI-powered assistant that is designed to help streamline lead qualification and outreach by automation research and content generation. For example, the research agent searches through both internal and external information to obtain details about the lead. It then summarizes that information to simplify the research process. From there, it drafts personalized emails based on the research it conducted.
+
+Copilot in Dynamics 365 Customer Service
+
+In support scenarios, the faster that you can identify appropriate information about a case, the easier it can be to resolve the customer’s issue. Copilot in Dynamics 365 Customer Service helps organizations more effectively summarize data.
+
+There are two primary elements related to summarization:
+
+Summarize cases: Copilot case summaries help support agents quickly understand the context of a case and resolve customer issues more efficiently. The case summary includes key information such as the case title, customer, subject, product, priority, case type, and description.
+
+Summarize conversations: Copilot conversation summaries provide context and relay the steps that you've already taken to solve the issue. You can summarize chat and transcribed voice conversations.
+
+The image shows an example of a case summary that was created.
+
+Autonomous agents in Dynamics 365 Customer Service
+
+As AI evolves, the ways it is being used to impact business are evolving as well. One significant advancement is the rise of autonomous agents. An autonomous agent is an AI system designed to operate independently, make decisions, and adapt to its environment without constant human input. In Dynamics 365 Customer Service, several autonomous agents assist representatives with tasks ranging from case creation and management to knowledge generation. Currently, there are three autonomous agents available:
+
+Case Management Agent: This agent assists representatives by automatically creating cases from chat conversations and incoming emails. It uses AI predictions to populate case fields and can automatically follow up and close cases.
+
+Customer Knowledge Management Agent: This agent autonomously converts case-related content into knowledge articles. When a case is closed, it evaluates existing content to determine whether a new knowledge article is necessary. If so, it automatically recommends and creates the article.
+
+Customer Intent Agent: This agent autonomously identifies, manages, and acts on customer intents across both self-service and agent-assisted channels. It analyzes historical interactions and offers intent-based suggestions to representatives.
+
+Copilot for Service
+
+For many organizations, their service centers utilize multiple applications and data sources to provide support to their customers. Copilot for Service is a standalone product that provides them with the ability to connect all their data including CRM, contact center systems, and other sources to fuel AP-powered conversations without needing to replace their existing solution.
+
+Out-of-the-box integrations with services such as Salesforce, ServiceNow, and Zendesk not only let you leverage that information in generative answers, but you can also deploy the tool applications that your agents are using every day.
+
+Copilot in Dynamics 365 Field Service capabilities
+
+The initial release of Copilot in Dynamics 365 Field Service focuses on simplifying work order creation. Organizations that use the Dynamics 365 Field Service app for Outlook can easily create work orders directly from incoming emails. Copilot considers information in the email such as who it is from and what the customer is requesting. Copilot configures Field Service data and populates a suggestion for the field service work order record. Users can either accept the suggestion and create a work order, or they can modify the data and then create a work order. Either way, Copilot suggestions can reduce the amount of time that it takes to enter work orders in the system.
+
+Schedule Operations Agent
+
+The Scheduling Operations Agent in Dynamics 365 Field Service helps dispatchers quickly and efficiently optimize the schedule of a technician. It addresses common scheduling challenges by using AI to suggest intelligent updates based on real-time conditions. For example, if a technician experiences same-day cancellations, the agent can recommend nearby work orders that align with promised times and priorities. If a technician is running behind schedule, the agent can help adjust the remaining bookings to minimize delays.
+
+Copilot in Dynamics 365 Customer Insights – Journeys
+
+In Dynamics 365 Customer Insights, Copilot can, for instance, help create customer journeys. An organization might want to create a welcome journey for people that recently joined your organization’s loyalty program. With Copilot journeys, you can describe the journey that you want to create or select from different examples. Copilot processes the prompt and responds with a journey suggestion that includes the automatically detected segment and each subsequent step clearly.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 7: Navigate to and within Dynamics 365 customer engagement apps ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/7-navigate-dynamics-365-customer-engagement-apps/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Navigate to and within Dynamics 365 customer engagement apps
+
+Content:
+Navigate to and within Dynamics 365 customer engagement apps
+5 minutes
+
+There are many ways that a user can access Dynamics 365 applications depending on their needs and the type of device on which they're working. Dynamics 365 Field Service and Dynamics 365 Sales have apps that users can download and install on their mobile devices. These apps offer targeted functionality based on the specific application. For example, field service technicians use the Field Service mobile application to quickly access the work orders and bookings assigned to them throughout the day.
+
+When organizations want to provide access to Dynamics 365 data to their customers, Power Pages makes it easy for customers and vendors to access Dynamics 365 data. One common example of accessing data is through a customer service portal. Customers can easily access data, such as open cases, and perform self-service options, such as working with knowledge articles.
+
+The easiest way to access the applications is through a web browser on the device of their choice. Users can access business applications such as Dynamics 365 customer engagement apps from the apps area of the Office 365 portal (https://www.office.com/apps). Once in the Apps area, select the Business Apps tab to access all your business applications quickly and easily from a centralized location. Each application is displayed in the form of a tile with a description to guide users to access the application. Select the application to open it.
+
+Let’s take a closer look at accessing these applications, and how to navigate around and switch between apps if needed.
+
+Lab simulation: Work with Dynamics 365 customer engagement apps
+
+This lab simulation steps you through the process of accessing the different Dynamics 365 customer engagement apps, and the process of performing some basic navigation through the application.
+
+Work with Dynamics 365 customer engagement apps
+
+As you saw, it's easy to access the different Dynamics 365 applications available to you directly from the Office 365 apps screen. Once you open an app, you can easily switch between the different applications as required. Dynamics 365 applications users access and use the basic functionality daily.
+
+In addition to the options that we mentioned, end users often need to easily access Dynamics 365 data while they're working in common applications such as Microsoft Teams. Dynamics 365 data can be easily accessed in everyday applications like Microsoft Outlook using the App for Outlook, and in Microsoft Teams through various integrations.
+
+The video showed you how to access and navigate the different applications. Now let’s give you a chance to access and navigate the applications on your own.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 8: Module assessment ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/8-knowledge-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Module assessment
+
+Content:
+Module assessment
+3 minutes
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 9: Summary and resources ---
+URL: https://learn.microsoft.com/en-us/training/modules/navigate-dynamics-customer-engagement-apps/9-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Summary and resources
+
+Content:
+Summary and resources
+3 minutes
+
+In this module, you learned about customer relationship management (CRM) and its impact on businesses. CRM involves attracting and maintaining strong relationships with customers through customer engagement. Dynamics 365 customer engagement apps are Microsoft's CRM applications that help organizations manage customer relationships. These apps can be used individually or together to create personalized marketing, sales, and service experiences using data and intelligence.
+
+You also learned about the Microsoft Power Platform, which is the foundation of Dynamics 365 customer engagement apps. The Power Platform combines PowerApps, Power BI, Power Automate, and Power Virtual Agents into one business application platform. Dynamics 365 customer engagement apps are model-driven applications built using Power Apps and use other Power Platform components like Power BI, Power Automate, Power Virtual Agents, and Power Pages.
+
+Microsoft Dataverse is another key element in Dynamics 365 customer engagement apps. It's a secure data storage and management platform used to store and secure data used by these apps. Dataverse allows organizations to create custom tables specific to their needs and provides benefits like easy management, security, rich metadata, logic and validation, and productivity tools.
+
+Lastly, you explored the different use cases for Dynamics 365 customer engagement apps. These apps include Dynamics 365 Customer Insights, Sales, Customer Service, Field Service, and Project Operations. Each app serves a specific purpose but shares common elements to provide a unified experience. For example, Dynamics 365 Sales helps manage sales cycles, while Dynamics 365 Customer Service enhances customer support. When combined, these apps provide a complete solution for managing customer relationships.
+
+Throughout this module, we:
+
+Described the different use cases for Dynamics 365 customer engagement apps.
+Described the Microsoft Power Platform about Dynamics 365 apps.
+Explained what Microsoft Dataverse and its use.
+Examined the different Dynamics 365 customer engagement apps.
+Reviewed the different options for accessing customer engagement applications.
+Described capabilities of Copilot in the Dynamics 365 customer engagement apps.
+References
+Microsoft Business Applications
+Inside Track
+Dynamics 365
+Website
+Dynamics 365 Team Blog
+Community
+YouTube Channel
+Customer engagement applications
+Sales
+Field Service
+Customer Insights
+Customer Service
+Microsoft Power Platform
+https://powerplatform.com/
+Power Apps
+Website
+Blog
+Documentation
+Community
+Ideas to suggest
+Product updates
+Guided Learning
+YouTube playlist
+Licensing / Pricing
+View/report issues
+Support
+Copilot in Dynamics 365
+Copilot in Dynamics 365
+For further study
+Microsoft Dataverse
+Microsoft Dataverse
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 10: Introduction to Dynamics 365 integration options and activities ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Introduction to Dynamics 365 integration options and activities
+
+Content:
+Introduction to Dynamics 365 integration options and activities
+2 minutes
+
+Dynamics 365 customer engagement apps are customer-focused business applications that are designed to help organizations more effectively engage their customers. Each Dynamics 365 customer engagement app helps solve specific business challenges, such as assisting with sales pipeline automation, or helping to provide customer support.
+
+This module examines the common activities and integration options available with the Dynamics 365 customer engagement apps.
+
+After completing this module, you will be able to:
+
+Work with customers and manage activities
+Describe search criteria and filters
+Explore different reporting options
+Describe the different available integration options
+
+Let's get started.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 11: Describe customers and activities ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/2-describe-dustomers-activities/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe customers and activities
+
+Content:
+Describe customers and activities
+4 minutes
+Customers
+
+Customers are a critical part of any Customer Relationship Management (CRM) solution. A customer represents an individual or company that receives, consumes, or buys a product or service.
+
+There are three ways organizations might use customers:
+
+Business-to-Business (B2B): Customers are other businesses. For example, a business that sells and implements telecommunication equipment to hotels.
+
+Business-to-Consumer (B2C): Customers are individuals. You likely meet these businesses every day. You engage with them by purchasing groceries, getting a haircut, or stopping at a favorite coffee shop.
+
+Hybrid: Customers might be either businesses or individuals. For example, an automotive repair shop certainly has customers who are individuals. Customers go there to get their oil changed, tires rotated, engines overhauled, and so on. What if that automotive business outsources its mechanics to organizations with fleets of trucks, buses, or automobiles as well? In this example, they service both organizations and people. Other examples might include software vendors, event centers, and insurance companies.
+
+Dynamics 365 customer engagement apps support all three customer models. There are two primary records used to support this functionality:
+
+Account: Represents a company or an organization that you do business with, such as a customer, vendor, partner, or reseller.
+
+Contact: Represents a person. A contact can be a standalone person, or an individual at an organization.
+
+Accounts and contacts can be related to one another in various ways. Individual contacts can be associated with an account. For example, if Microsoft were an account within the Microsoft Dynamics 365 system, then the contacts might include Bill Gates. Each contact record in Dynamics 365 includes the parent customer field that allows you to link a contact to a specific account record.
+
+While an account might have multiple contacts, it's likely that it has a primary contact. The primary contact represents a key person at the organization that you primarily deal with. This primary contact might be the person you deal with as it relates to billing, sales, and so on.
+
+While many accounts are standalone accounts, there are occasions when an account can be considered as the parent account to another account. This relationship occurs when one account is a division or subsidiary of a parent company.
+
+The image shows what this might look like.
+
+Activities
+
+Activities in Dynamics 365 help keep track of customer communications. For example, as you work with customers, you might do things like take notes, send emails, make phone calls, set up appointments, or assign yourself tasks as you resolve a service case. By entering these activities in Dynamics 365, you have a historic record of your communication with customers.
+
+Activities are often associated with contacts and accounts but, depending on the Dynamics 365 application you're using, they can also be associated with other types of records.
+
+In sales scenarios, activities might be added to records like leads, opportunities, or quotes.
+
+In service scenarios, activities might be added to records like cases, work orders, or projects.
+
+As your organization's relationship with a customer grows over time, you and other people on your team can look through the record timeline to see the history of your interactions.
+
+Lab simulation: Work with customers and activities
+
+This lab simulation steps you through the process of working with customer and activity records.
+
+Work with Dynamics 365 customers and activities
+
+Sales staff work with customer information every day. It's important to have easy access to customers' details, and quickly create and log activities related to those activities.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 12: Describe search criteria and filters ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/3-describe-search-criteria-filters/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe search criteria and filters
+
+Content:
+Describe search criteria and filters
+3 minutes
+
+As the number of records in Dynamics 365 grows, you need to be able quickly locate and access records, such as when a customer calls with a question related to their account.
+
+Dynamics 365 provides multiple ways to locate data depending on where you are and what you're looking for. If you are working in a view, you can easily filter the list of records displayed with the filter options available for each column displayed.
+
+For example, in the image below we're using the filter control on the City column to filter only the accounts that are in Redmond.
+
+You can filter based on multiple columns at once if needed. Any applied filters can be removed by selecting the filter icon on the column.
+
+Filtering provides a quick way to get broad results when locating data. However, there are many times when it's easier to search for a record directly. In these instances, you can use the search options available.
+
+The two most common searching tools are:
+
+Filter by keyword: This option is often referred to as Quick Find and is available on any Dynamics 365 view. You provide the first several letters of the item you're looking for, and the results are returned directly in the view. Consider this scenario: You review the list of active account records and type “Adventure” into the search field. As a result, you see all the account records that have “Adventure” at the beginning.
+
+Multi-table search: This search tool is often referred to as Categorized Search. The primary difference between multi-table search and a quick find is that instead of only searching one type of record, multi-table searches across multiple tables defined by the organization. In this instance, if you enter Adventure, you're presented with all accounts that begin with Adventure. You're also provided with a list of any contacts associated with an account that begins with the word Adventure.
+
+There are times when you can't find what you are looking for by using the standard filtering and searching options. For instance, while working in Dynamics 365 Sales, you might need to locate all the accounts with open opportunities. Standard filtering doesn't work in this case since you need to filter based on multiple entities. You then need to use the edit filter option. This allows you to create detailed filters that can span multiple entities. The edit filter icon is located just to the left of the quick find search box.
+
+Advanced find
+
+Another way that you can locate data in Dynamics 365 apps is with Advanced find. Advanced find is a simple query designer that allows you to visually create a query that displays all records that match the criteria defined. You can also use Advanced find to prepare data for export to Office Excel so that you can analyze, summarize, or aggregate data, or create PivotTables to view your data.
+
+In the image, the Advanced find filter displays all active accounts owned by the current user.
+
+Clickthrough demo: Search for and filter data in Dynamics 365
+
+In this clickthrough demonstration, you're using the different searching and filtering options available in Dynamics 365 to locate different account records.
+
+Search for and filter data in Dynamics 365
+
+Locating data in the application is a daily task. The more efficient you are at finding and searching, the quicker you're at handling customer inquiries and navigating through the application.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 13: Describe reporting capabilities including charts, dashboards, and views ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/4-describe-reporting-capabilities-including-charts-dashboards-views/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe reporting capabilities including charts, dashboards, and views
+
+Content:
+Describe reporting capabilities including charts, dashboards, and views
+8 minutes
+
+Dynamics 365 provides multiple reporting options available out of the box to provide users with some basic reporting on their data. All the reporting options in Dynamics 365 CRM apps are configurable and enforce established security roles for data access.
+
+Views
+
+When you create views, you create analytics based on the data that is important to you. When you view records, you can apply filters to drill down into the detail that is important to you.
+
+Charts
+
+Charts are quick and actionable visualizations of your data. The charts are interactive so you can continue to drill down into relevant data. You can also place charts on dashboards and view them in line with the data they're displaying.
+
+Dashboards
+
+Both standard and interactive dashboards offer a combination of charts and views in an easy to consume experience.
+
+Dashboards are a collection of:
+
+Views
+
+Charts
+
+Iframe
+
+Web resources
+
+The advantage of dashboards is that you can easily obtain a high-level overview of data all in one diagram. Based on the first party application that you're using, there are different dashboard options available.
+
+The screenshot shows an example of a Dynamics 365 Sales dashboard.
+
+Power BI
+
+There are times when the out-of-the-box reporting tools available in the Dynamics 365 customer engagement apps don't meet the needs of an organization. In those instances, Power BI reports can be built from Dynamics 365 data. Power BI is a collection of software services, apps, and connectors that work together to turn unrelated sources of data into coherent, visually immersive, and interactive insights. Once created, Power BI dashboards can be embedded in Dynamics 365 applications. This makes it easy for users to not only use the capabilities provided by the out-of-the-box reports as needed, but also allows them to access more advanced reporting through embedded Power BI reports.
+
+As you're working in the application, you can select the Analyze in Power BI button at any time. You then create a Power BI report based on the selected data. You can easily filter the information based on what you want to see.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 14: Describe Microsoft Excel and Microsoft Word integrations ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/5-describe-excel-integrations/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft Excel and Microsoft Word integrations
+
+Content:
+Describe Microsoft Excel and Microsoft Word integrations
+3 minutes
+
+There are many different scenarios where Dynamics 365 and Office can work together. Users can use Microsoft Word to simplify sending communication to customers, and Microsoft Excel can be used to provide more detailed end user capabilities.
+
+Microsoft Excel
+
+The integration between model-driven apps and Excel is a favorite feature for many users. Excel is one of the most popular data analysis tools for business users, and the ease of exporting Dataverse data to Excel is a significant benefit for users at all levels of an organization.
+
+Static and dynamic worksheets
+
+Most Dynamics 365 views can be exported as static or dynamic data into Excel. Static worksheets create a local copy of the data, and no connection is maintained between Dataverse workbooks. Exported dynamic workbooks or pivot tables maintain a link between the Dataverse data and the Excel file. The Dataverse security model is maintained, and users need appropriate privileges to refresh the data.
+
+Another export option is exporting to Excel Online. This option opens the Excel file for the user in a window within Dynamics 365 or custom model-driven apps. This option is popular when someone wants to quickly edit multiple Dynamics 365 records.
+
+Excel Templates
+
+Like Word document templates, Excel templates empower Dynamics 365 users to easily create up to date Excel reports without needing knowledge of Excel formulas, charts, or pivot tables. Templates can be opened in Excel online or downloaded, and then opened locally in Excel. Templates allow users who would usually be unable to create these reports to easily use premade Excel documents with current data. It also empowers Excel users to create reports with current data instead of maintaining their own data outside the system.
+
+Microsoft Word
+
+Like using templates in Microsoft Excel, users can use Word templates to simplify communication with customers. Word templates can be used in all customer engagement apps such as Dynamics 365 Sales and Dynamics 365 Customer Service. The templates provide users with a one-click way to generate standardized documents automatically populated with data.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 15: Describe Microsoft SharePoint integration ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/6-describe-sharepoint-integration/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft SharePoint integration
+
+Content:
+Describe Microsoft SharePoint integration
+3 minutes
+
+Microsoft SharePoint is used by organizations across the world for document management. It provides many features that are beneficial when collaborating on documents such as document check in and out functionality, and versioning. These features provide deeper document management capabilities than the attachment options that are available in Dynamics 365 CRM applications.
+
+With Dataverse, organizations can store documents on Microsoft SharePoint and manage them from within your Dynamics 365 customer engagement apps. This capability allows you to take full advantage of SharePoint document management capabilities since all the documents you create in your app are stored on SharePoint. Not only does this mean that your documents are automatically synced to your desktop and mobile devices, but they're also accessible for collaboration with non-Dynamics 365 users.
+
+Once integration is turned on, Dynamics 365 users can:
+
+Create new folders for storing files directly in SharePoint
+
+Create new documents
+
+Upload existing documents
+
+Open the SharePoint site directly, which provides you with the ability to:
+
+Check documents in and out
+
+Use SharePoint's versioning capabilities
+
+To learn more about the SharePoint integration that is available, see: Collaborate using SharePoint
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 16: Describe Microsoft Teams integration ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/7-describe-teams-integrations/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft Teams integration
+
+Content:
+Describe Microsoft Teams integration
+3 minutes
+
+Microsoft Teams is becoming one of the most important applications for organizations. It's the primary collaboration tool for engaging with teammates, virtual meetings, and project collaboration. The Dynamics 365 applications integrate with Microsoft Teams in multiple ways that allow you to take advantage of these collaboration features.
+
+Dynamics 365 for Microsoft Teams integration enables users to easily work with customer information in diverse customer engagement apps, including Dynamics 365 Sales and Dynamics 365 Customer Service. Users can share files directly from Microsoft Teams. Sharing files helps them to be more productive and get work done more effectively.
+
+Collaboration hub: Access a shared workspace for Office apps that most of us already use to work sales opportunities.
+
+File integration: Coauthor documents using Microsoft 365 and automatically sync with customer engagement apps in Dynamics 365.
+
+Dynamics 365 assistant application for Microsoft Teams: The Dynamics 365 assistant app is available on Microsoft Teams as part of the existing Dynamics 365 app. The app provides sellers with a simple-to-use experience. It combines data from multiple sources such as Microsoft 365 and Dynamics 365.
+
+Embedded Teams chat: With Microsoft Teams embedded chat, you can collaborate with stakeholders directly from within Dynamics 365. This capability allows you to use Dynamics 365 data as an organizing layer for your Teams collaboration activity. It links chats to Dynamics 365 records for convenient access for all participants. These records include, for example, sales opportunities and service cases.
+
+Clickthrough demo: Work with Teams integration
+
+In this clickthrough demonstration, you see how easy it's to create connected chats in Teams, directly from within Dynamics 365 customer engagement apps.
+
+Work with Teams integration
+
+Teams is an important collaboration tool for many organizations. Organizations use it to collaborate with colleagues and customers. The Microsoft Teams integration capabilities in Dynamics 365 customer engagement applications make it easy to collaborate with Teams users directly from Dynamics 365.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 17: Describe Microsoft Outlook integration ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/8-describe-outlook-integrations/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Describe Microsoft Outlook integration
+
+Content:
+Describe Microsoft Outlook integration
+3 minutes
+
+Synchronize appointments, contacts, emails, and more. Use the Dynamics 365 App for Outlook to view information about Dynamics 365 contacts and leads while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent records from Dynamics 365.
+
+Other functionality available:
+
+Link email messages, meetings, and appointments to a Dynamics 365 record with a single click. For example, link an email message to a specific account, opportunity, or case. Dynamics 365 App for Outlook also supports custom entities.
+
+Open Dynamics 365 records directly to find or enter more detailed information.
+
+Add a phone call, task, or appointment activity to Dynamics 365.
+
+Create a new Dynamics 365 record for any entity (record type).
+
+Add email templates, knowledge articles, and sales literature when you create an email message or set up a meeting.
+
+Now let's check your knowledge of what we covered in this module.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 18: Module assessment ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/9-knowledge-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Module assessment
+
+Content:
+Module assessment
+3 minutes
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 19: Summary and resources ---
+URL: https://learn.microsoft.com/en-us/training/modules/examine-common-activities-integration-options/10-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-core-capabilities-of-microsoft-dynamics-365-crm
+Title: Summary and resources
+
+Content:
+Summary and resources
+3 minutes
+
+In this module, you learned about the role of customers and activities in Dynamics 365 customer engagement apps. Customers can be businesses or individuals, and are represented by account and contact records. Accounts represent companies or organizations, while contacts represent individuals. These records can be related to each other, and contacts can be associated with specific accounts. Activities in Dynamics 365 help track customer communications, such as notes, emails, phone calls, appointments, and tasks. Activities can be associated with contacts, accounts, and other types of records depending on the application.
+
+The main takeaways from this module are:
+
+Customers are a critical part of CRM solutions and Dynamics 365 supports both B2B and B2C customer models.
+Account and contact records are used to represent customers in Dynamics 365, and they can be related to each other.
+Activities help track customer communications and can be associated with contacts, accounts, and other records.
+Dynamics 365 provides various ways to locate and access data, including filtering, searching, and using views.
+Reporting capabilities in Dynamics 365 include views, charts, dashboards, and integration with Power BI.
+Excel integration allows users to export data from Dynamics 365 into Excel for analysis and reporting.
+SharePoint integration allows the Dynamics 365 customer engagement apps to use the document management capabilities of SharePoint.
+Microsoft Teams integration enables collaboration and file sharing directly from within Dynamics 365.
+Outlook integration allows users to view and interact with Dynamics 365 information directly from Outlook.
+
+Throughout this module, we:
+
+Examined the process of working with customers and activities
+Explained the different reporting capabilities
+Described the different integration options
+
+Now that you understand the foundational capabilities available, consider exploring the other customer engagement applications in more detail. These applications include Dynamics 365 Sales, Dynamics 365 Customer Insights, Dynamics 365 Customer Service, and Dynamics 365 Field Service.
+
+References
+Microsoft Business Applications
+Inside Track
+Microsoft 365
+Website
+Products
+For further study
+Advanced Find
+Views
+Teams integration
+Search and filter data
+Filter a search list
+Export from Excel
+Dynamics 365 Customer Voice
+Customer Voice
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+========================================================================================================================
+
+=== Learning Path 2: Explore the fundamentals of Microsoft Dynamics 365 Customer Insights ===
+URL: https://learn.microsoft.com/en-us/training/paths/learn-fundamentals-of-microsoft-dynamics-365-marketing/
+
+Found 18 modules in this path.
+
+--- Module 1: Introduction ---
+URL: https://learn.microsoft.com/en-us/training/modules/explore-dynamics-365-marketing/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.learn-fundamentals-of-microsoft-dynamics-365-marketing
+Title: Introduction
+
+Content:
+Introduction
+2 minutes
+
+Dynamics 365 Customer Insights - Journeys empowers marketers with a wide array of tools that help take control of and manage your organization’s entire customer marketing strategy. Lead generation and scoring tools help you effectively identify and target potential customers and help you turn them into business relationships. Easy to use drag and drop tools help you quickly create dynamic marketing content and create automated customer journeys.
+
+This module describes the key marketing capabilities that are available in Customer Insights - Journeys and explains how this functionality helps businesses make better decisions quickly by bringing together a complete end-to-end solution.
+
+After completing this module, you'll be able to:
+
+Identify use cases for Dynamics 365 Customer Insights - Journeys.
+Explain email marketing.
+Describe how to target customers with segments.
+Explain how to create and use customer journeys in Dynamics 365 Customer Insights - Journeys.
+Describe lead generation and qualification.
+Describe event management features and capabilities.
+Explore the capabilities of Copilot in Customer Insights - Journeys
+
+Now let's look at the key capabilities of Dynamics 365 Customer Insights - Journeys.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 2: Describe use cases for Dynamics 365 Customer Insights - Journeys ---
+URL: https://learn.microsoft.com/en-us/training/modules/explore-dynamics-365-marketing/2-describe-use-cases-dynamics-365-customer-insights-journeys/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.learn-fundamentals-of-microsoft-dynamics-365-marketing
+Title: Describe use cases for Dynamics 365 Customer Insights - Journeys
+
+Content:
+Describe use cases for Dynamics 365 Customer Insights - Journeys
+8 minutes
+
+Modern marketers need smarter ways to find the right prospects and build long-lasting relationships. Customer Insights - Journeys was designed to help you and your organization identify the right leads and nurture them into becoming customers. Customer Insights - Journeys lets you run multi-channel marketing campaigns to attract the right prospects. These campaigns can include email, web, events, text messaging, and custom channels. For example, a real estate company can create customer segments in Customer Insights - Journeys that represent younger families looking to purchase homes in a specific zip code. We can send them targeted marketing emails. As buyers open and interact with those emails, links to specific marketing content provide them with more information based on what they select. This content might include what they should be looking for in a home, information on financing. The information could also contain details about what is available in the area they're looking at.
+
+Customer Insights - Journeys provides multiple features as part of its core functionality that helps identify and target your marketing efforts and maximize your potential for success.
+
+These capabilities include:
+
+Generating and identifying potential sales opportunities as leads and scoring those lead to identify the ones to focus on.
+
+Defining marketing segments that organize contacts from your database into logical groups that match your marketing strategies.
+
+Creating personalized marketing content that can be sent to contacts that meet legal and deliverability requirements.
+
+Creating fully automated customer journeys that combine digital engagement with multiple paths managed by interactive triggers.
+
+Creating and managing marketing events including defining the event type, building schedules, and securing sponsors, and managing event registrations.
+
+Real-time marketing
+
+Real-time marketing is often referred to as customer journey orchestration. Real-time marketing allows you to trigger customer journeys in real time based on the signals and rich profile data you collect from your customers. The data ensures that the triggered customer journey picks the right channel for each individual and connects in the moments that matter. For example, you could have a customer journey triggered when someone connects to the Wi-Fi at your coffee shop, or when someone visits your company's website.
+
+Some of the key benefits of real-time marketing include:
+
+Engage customers in real-time
+
+With trigger-based customer journeys using email, text message, or push notification channels, organizations can trigger customer journeys in real time. They can pick the right channel for each individual, and react to customer-led actions in the moments that matter.
+
+Win customers and earn loyalty faster
+
+Real-time customer journeys are truly an end-to-end experience as they work across all customer touchpoints.
+
+Personalize customer experiences with AI
+
+Turn insights into relevant action with AI-driven recommendations for content, channels, and analytics.
+
+Customer Insights segment and profile integration allows organizations to seamlessly use the deep customer understanding in Customer Insights.
+
+Grow with a unified, adaptable platform
+
+Easily customize and connect with tools you already use.
+
+Efficiently manage compliance requirements and accessibility guidelines.
+
+When reaching out to your customers with Customer Insights - Journeys, there are three important things to consider: who, what, and when.
+
+The who is your audience – who is this communication for? In Customer Insights - Journeys, a segment defines your audience. This segment is a subset of your contacts that meet some criteria. For example, you could have a segment containing customers over the age of 60 who live in North America. You could have a segment for customers who earn more than $100,000 per year, or a blanket segment with all your active contacts. Learn more about segments: Build segments in Customer Insights - Journeys.
+
+The what is the content and form of your communication - what are you sending? In Customer Insights - Journeys, this can be an email, a push notification, or a text message. These channels can be used separately or together in one campaign. Learn more about channels:
+
+Create an email
+
+Create a push notification
+
+Create a text message
+
+The when can be as straightforward as a planned time when you want to send the communication, but with Customer Insights - Journeys, it can also be an event that triggers the communication as part of a journey. You can combine emails, push notifications, and text messages into journeys. Those journeys can operate over either a segment of contacts at a planned time or that can respond to a trigger to reach customers in the moments that matter. Learn more about journeys:
+
+Create a segment-based journey
+
+Create a trigger-based journey
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
+
+--- Module 3: Describe email marketing ---
+URL: https://learn.microsoft.com/en-us/training/modules/explore-dynamics-365-marketing/3-describe-email-marketing/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.learn-fundamentals-of-microsoft-dynamics-365-marketing
+Title: Describe email marketing
+
+Content:
+Describe email marketing
+2 minutes
+
+Email is a key marketing channel for most modern organizations. Not only does it let you reach large numbers of customers in a short amount of time, but it’s easy to tailor message content to provide a personal experience for customers receiving it.
+
+Marketing emails is another core feature of the Dynamics 365 Customer Insights - Journeys application. It lets you send large volumes of personalized marketing emails, monitor how recipients interact with them, drive customer journey automation, and present aggregated statistical results for individual contacts. For example, Contoso Coffee can use the email marketing capabilities to create targeted email messages for things such as launching specific products, highlight special promotions, or even brand promotion. These messages are easily delivered through targeted customer journeys.
+
+Organizations can offer customers the ability to subscribe to an unlimited number of relevant topics while obtaining necessary consent to comply with legal and regulatory requirements. Customers can then opt in to receive marketing subscriptions such as "Newsletters," "Community Events," or "Product Discounts." Once you create topics, you can collect consent from new customers using flexible options on marketing forms. These options allow you to gather consent either explicitly (through visible fields) or implicitly (through hidden fields). Real-time marketing automatically enforces topic checks without the need to create and manage subscription lists of contacts.
+
+The email designer in Dynamics 365 Customer Insights - Journeys provides a visual design interface that lets you:
+
+Add, configure, and arrange various text and graphical elements your email requires.
+
+Design the overall message with basic fonts, colors, and backgrounds.
+
+Add dynamic content email messages such as adding a contact’s first or last name to the body of your email.
+
+Add links to external webpages, Dynamics 365 Customer Insights - Journeys pages, event registration pages, surveys, and more.
+
+After your marketing emails are created, they're ready to send. Emails in Dynamics 365 Customer Insights - Journeys are implemented through customer journeys.
+
+Feedback
+
+Was this page helpful?
+
+Yes
+No
+================================================================================
