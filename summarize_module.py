@@ -2,24 +2,33 @@
 import requests
 import json
 import re
+import time
+
 
 OLLAMA_API_URL = "http://127.0.0.1:11434/api/generate"
 MODEL_NAME = "llama3"
+MAX_RETRIES = 3
+RETRY_DELAY = 5  # seconds
+
+
+def load_template(filepath: str = "CourseStructure.txt") -> str:
+    """Load template file."""
+    with open(filepath, "r", encoding="utf-8") as f:
+        return f.read()
+
 
 def clean_json_string(json_str):
     """Clean common JSON formatting issues."""
-    # Remove trailing commas before } or ]
     json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
-    # Remove any text before the first {
     json_str = re.sub(r'^[^{]*', '', json_str)
-    # Remove any text after the last }
     json_str = re.sub(r'[^}]*$', '', json_str)
     return json_str
 
-def summarize_module(content: str, template: str) -> str:
+
+def summarize_module(content: str, template: str, retry_count: int = 0) -> dict:
     """
-    Summarize a module using Ollama and a template.
-    Returns the summary as a string, or error message if parsing fails.
+    Summarize a module using Ollama with retry logic.
+    Returns dict with 'summary' and 'success' keys.
     """
     prompt = (
         "You are an expert summarizer. Use the template structure below as your OUTPUT FORMAT. "
@@ -51,25 +60,31 @@ def summarize_module(content: str, template: str) -> str:
                     json_lines.append(response_obj['response'])
         
         summary_str = ''.join(json_lines).strip()
-        
-        # Clean the JSON string
         summary_str = clean_json_string(summary_str)
         
-        # Try parsing with standard json
         try:
             summary_json = json.loads(summary_str)
         except Exception:
-            # Fallback to demjson3 for tolerant parsing
             try:
                 import demjson3
                 summary_json = demjson3.decode(summary_str)
             except Exception as e:
-                print(f"\n⚠️ Failed to parse JSON. Error: {e}")
-                print(f"Raw output (first 500 chars):\n{summary_str[:500]}\n")
-                return f"[ERROR: Could not parse JSON. Check logs for raw output.]"
+                raise Exception(f"JSON parsing failed: {e}")
         
-        return summary_json.get("summary", "[ERROR: No summary field in response]")
+        return {
+            "summary": summary_json.get("summary", "[ERROR: No summary field in response]"),
+            "success": True
+        }
     
     except Exception as e:
-        print(f"\n⚠️ Error during summarization: {e}")
-        return f"[ERROR: {str(e)}]"
+        if retry_count < MAX_RETRIES:
+            print(f"    ⚠️ Attempt {retry_count + 1} failed: {str(e)}")
+            print(f"    Retrying in {RETRY_DELAY} seconds...")
+            time.sleep(RETRY_DELAY)
+            return summarize_module(content, template, retry_count + 1)
+        else:
+            print(f"    ❌ Failed after {MAX_RETRIES} attempts: {str(e)}")
+            return {
+                "summary": f"[ERROR after {MAX_RETRIES} retries: {str(e)}]",
+                "success": False
+            }
